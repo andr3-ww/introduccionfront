@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Artista Digital</title>
+
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    z-index:100;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.5);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    bottom:10%;
+    left:8%;
+}
+
+.hero h1{
+    font-size:4rem;
+    max-width:700px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 30px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.gallery{
+    padding:100px 8%;
+}
+
+.gallery h2{
+    margin-bottom:40px;
+}
+
+.masonry{
+    columns:3;
+    gap:20px;
+}
+
+.masonry img{
+    width:100%;
+    margin-bottom:20px;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.masonry img:hover{
+    transform:scale(1.03);
+}
+
+.projects{
+    padding:100px 8%;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-grid article{
+    background:#1a1a1a;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.project-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+}
+
+.about{
+    padding:100px 8%;
+    display:flex;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:300px;
+    border-radius:50%;
+}
+
+.contact{
+    text-align:center;
+    padding:100px 8%;
+}
+
+.contact a{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:white;
+    color:black;
+    border-radius:40px;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #222;
+}
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>THIAGO ART</h2>
+
+        <ul>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <img src="assets/hero.jpg" alt="Artwork principal">
+
+    <div class="hero-text">
+        <h1>Artista Digital & Ilustrador</h1>
+
+        <p>
+            Creando personajes, mundos y emociones a través del arte.
+        </p>
+
+        <a href="#galeria" class="btn">
+            Explorar trabajos
+        </a>
+    </div>
+
+</section>
+
+<section id="galeria" class="gallery">
+
+    <h2>Trabajos Destacados</h2>
+
+    <div class="masonry">
+
+        <img src="assets/project1.jpg">
+        <img src="assets/project2.jpg">
+        <img src="assets/project3.jpg">
+        <img src="assets/project4.jpg">
+        <img src="assets/project5.jpg">
+        <img src="assets/project6.jpg">
+
+    </div>
+
+</section>
+
+<section id="proyectos" class="projects">
+
+    <h2>Proyectos</h2>
+
+    <div class="project-grid">
+
+        <article>
+            <img src="assets/project1.jpg">
+
+            <div class="info">
+                <h3>Fantasy Kingdom</h3>
+
+                <p>
+                    Diseño de personajes y escenarios inspirados en RPGs.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <img src="assets/project2.jpg">
+
+            <div class="info">
+                <h3>Cyberpunk City</h3>
+
+                <p>
+                    Arte conceptual de una ciudad futurista.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <img src="assets/project3.jpg">
+
+            <div class="info">
+                <h3>Character Design</h3>
+
+                <p>
+                    Creación de personajes para videojuegos.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section id="sobre-mi" class="about">
+
+    <img src="assets/avatar.jpg">
+
+    <div>
+
+        <h2>Sobre mí</h2>
+
+        <p>
+            Soy ilustrador digital especializado en diseño de personajes,
+            concept art y arte narrativo.
+        </p>
+
+        <p>
+            Mi objetivo es convertir ideas en imágenes memorables.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contacto" class="contact">
+
+    <h2>Trabajemos juntos</h2>
+
+    <p>
+        Disponible para comisiones, proyectos y colaboraciones.
+    </p>
+
+    <a href="mailto:tucorreo@gmail.com">
+        Contactar
+    </a>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Thiago Art
+    </p>
+
+</footer>
+
+</body>
+</html>
